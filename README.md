@@ -14,7 +14,7 @@ At the selected binding positions (identified from Katz et al., 2022), how do th
 ### Tool: Rstudio
 
 *Step by step analysis:*
-1. Downloaded a LASV fasta file containing 500 viral sequences from Nigeria, Sierra Leone and other West African countries and a metadata csv file containing the matching accession numbers and countries.
+1. Downloaded a LASV GPC fasta file containing 500 viral sequences from Nigeria, Sierra Leone and other West African countries and a metadata csv file containing the matching accession numbers and countries.
 2. Filtered the data to only retain Sierra Leone and Nigerian sequences, all Sierra Leonean (SLean) sequences (n=34) were retained. For Nigerian sequences (n=~405) a random seed was set (set.seed(123)) to ensure reproducibility and random sampling was carried out to create an equal sample of 34 to match the number of SLean sequences.
 3. Reverse complemented the sequences where necessary (since Lassa has an ambisense S strand). 
 4. Translated the sequences, aligned using ClustalOmega in msa (R), and extracted and compared SL and NG at some of the key interacting residue positions of the virus. The Katz et.al, 2022 paper defines the domains of the GPC precursor as follows: **1. SSP(Stable Single Peptide):** REsidues: 1-58 **2. GP1(Glycoprotein 1):** Residues: 59-259 **3. GP2(GlycoProtein 2):** Residues: 260-491. Since the GP1 is the domain responsible for cell attachment, the positions where SL and NG were compared are Y150, R256, R257 and L258 because they were identified as the key interacting residues by the same paper. 
